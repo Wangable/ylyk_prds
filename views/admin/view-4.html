@@ -1,0 +1,183 @@
+<meta charset="utf-8" />
+<h2>节目体系</h2>
+
+<h3>概述</h3>
+<ol class="ui list">
+	<li>友邻优课所有音频内容均以“节目”的形式呈现；</li>
+	<li>内容运营人员在后台对节目进行编辑，运营主管（内容）负责发布节目；</li>
+</ol>
+
+<h3>添加节目</h3>
+<ol class="ui list">添加节目需要以下内容：
+	<li>封面图片：尺寸比例16:9；大小480*270</li>
+	<li>标题：最多15字</li>
+	<li>标签：从节目标签库中选择，多选</li>
+	<li>教师：从<code>本专辑</code>教师列表选择</li>
+	<li>初始收听人数：数字</li>
+	<li>初始喜欢人数：数字</li>
+	<li>节目内容：html编辑</li>
+	<li>上传音频</li>
+</ol>
+
+<h3>删除节目</h3>
+<ol class="ui list">
+	<li>在操作前进行确认提醒；进行归档操作，防止误删造成重大损失；</li>
+</ol>
+
+<h3>修改节目</h3>
+<ol class="ui list">
+	<li>若已上线，则不可修改上线时间；</li>
+	<li>只有运营主管（内容）可以修改节目的上线状态；</li>
+	<li>初始收听人数和喜欢人数可以修改，实际收听和喜欢人数不可修改；</li>
+	<li>发布时间若早于当前时间则不可修改；</li>
+</ol>
+
+<h3>版本控制</h3>
+<ol class="ui list">
+	<li>用户每次保存都增加一个版本；</li>
+	<li>需要进行版本控制，能找回历史版本，防止用户修改冲突；</li>
+	<li>记录并显示：谁在什么时候提交的版本内容；</li>
+	<li>点击加载相应版本；</li>
+</ol>
+
+<h3>查看节目</h3>
+<ol class="ui list">
+	<li>除新增时填写的信息外还有以下内容：
+		<ol>
+			<li>时长</li>
+			<li>上线状态</li>
+			<li>喜欢人数=实际+初始</li>
+			<li>收听人数=实际+初始</li>
+		</ol>
+	</li>
+	<li>写心得人数；</li>
+	<li>心得数量；</li>
+	<li>收听人数；</li>
+</ol>
+
+<h3>发布预览</h3>
+<ol class="ui list">
+	<li>在编辑时或者编辑后可以模仿手机App页面，以用户的角度进行预览；</li>
+	<li>要求模仿手机端，以封面图片为背景，标题为导航栏标题，正文为内容； </li>
+</ol>
+
+<h3>节目分析</h3>
+<ol class="ui list">
+	<li>热度分析：选择时间范围、教师，显示该教师在指定范围内每天课程的<code>实际</code>“收听人数”、“写心得人数”、“点赞人数”。； </li>
+	<li>标签分析：扇形图显示各标签的人数占比。手动选择“收听”、“写心得”、“点赞”</li>
+</ol>
+
+<h3>图文样式</h3>
+<ol class="ui list">
+	<li>内容编辑人员会根据提前定义好的样式进行内容编辑；</li>
+	<li>编辑人员点击相应样式标签后，在编辑框中插入一段代码，编辑人员只需修改文字和图片即可；</li>
+	<li>文字颜色默认为白色；</li>
+	<li>对已有的《每日新闻》专辑和《剧读莎士比亚》专辑进行分析，归纳总结出如下通用样式：
+	<table class="ui structured center aligned celled table">
+		<thead>
+			<tr>
+				<th class="one wide">类型</th>
+				<th class="two wide">子类型</th>
+				<th class="seven wide">样式</th>
+				<th class="six wide">用处</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="4">标题</td>
+				<td>大标题</td>
+				<td>18px、居中、加粗</td>
+				<td>顶部导航栏宽度有限，可能无法显示全部标题</td>
+			</tr>
+			<tr>
+				<td>小标题</td>
+				<td>16px，左侧黄色竖线</td>
+				<td>导读、原文、生词好句等标题</td>
+			</tr>
+			<tr>
+				<td>英文标题</td>
+				<td>16px、左侧、加粗</td>
+				<td>英文原文标题</td>
+			</tr>
+			<tr>
+				<td>图片标题</td>
+				<td>16:9图片，下方插入16px白色文字，文字部分背景色为#2b2d30</td>
+				<td>上方带图片的标题</td>
+			</tr>
+			<tr>
+				<td>正文</td>
+				<td>/</td>
+				<td>14px</td>
+				<td>正文部分</td>
+			</tr>
+			<tr>
+				<td rowspan="3">矩形图片</td>
+				<td>小</td>
+				<td>80*45</td>
+				<td>小图片</td>
+			</tr>
+			<tr>
+				<td>中</td>
+				<td>160*90</td>
+				<td>中图片</td>
+			</tr>
+			<tr>
+				<td>大</td>
+				<td>320*180</td>
+				<td>大图片</td>
+			</tr>
+			<tr>
+				<td rowspan="3">圆形图片</td>
+				<td>小</td>
+				<td>50*50</td>
+				<td>圆角半径为50%</td>
+			</tr>
+			<tr>
+				<td>中</td>
+				<td>100*100</td>
+				<td>圆角半径为50%</td>
+			</tr>
+			<tr>
+				<td>大</td>
+				<td>200*200</td>
+				<td>圆角半径为50%</td>
+			</tr>
+			<tr>
+				<td rowspan="2">引用</td>
+				<td>竖线</td>
+				<td>左侧，3px，灰色条，高度与输入内容高度相同</td>
+				<td>引用名人名言等</td>
+			</tr>
+			<tr>
+				<td>方框</td>
+				<td>border，1px，黄色，高度与输入内容高度相同</td>
+				<td>金句等</td>
+			</tr>
+		</tbody>
+	</table>
+	</li>
+</ol>
+
+<h3>页面原型</h3>
+<ol class="ui list">
+	<li>【创建节目】界面原型图如下：
+		<a href="img/prototype/programme/programme-create.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/programme/programme-create.png" />
+		</a>
+	</li>
+	<li>【查看节目】界面原型图如下：
+		<a href="img/prototype/programme/programme-info.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/programme/programme-info.png" />
+		</a>
+	</li>
+	<li>【定时发布】界面原型图如下：
+		<a href="img/prototype/programme/programme-timed-release.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/programme/programme-timed-release.png" />
+		</a>
+	</li>
+	<li>【节目分析】界面原型图如下（未定稿）：
+		<a href="img/prototype/programme/programme-anal.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/programme/programme-anal.png" />
+		</a>
+	</li>
+</ol>
