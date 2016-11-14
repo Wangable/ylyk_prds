@@ -14,37 +14,38 @@
 		<link rel="stylesheet" href="libs/semantic-ui/semantic.css" />
 		<link rel="stylesheet" href="libs/highlight/styles/tomorrow.css" />
 		<link rel="stylesheet" href="css/style.css" />
+
 		<style type="text/css">
 			html.ios,
 			html.ios body {
 				height: 100%!important;
 			}
-			
+
 			.secondary.pointing.menu .toc.item {
 				display: none;
 			}
-			
+
 			.masthead.segment {
 				min-height: 700px;
 				padding: 1em 0em;
 			}
-			
+
 			.masthead .ui.menu .ui.button {
 				margin-left: 0.5em;
 			}
-			
+
 			.masthead h1.ui.header {
 				margin-top: 3em;
 				margin-bottom: 0em;
 				font-size: 4em;
 				font-weight: normal;
 			}
-			
+
 			.masthead h2 {
 				font-size: 1.7em;
 				font-weight: normal;
 			}
-			
+
 			@media only screen and (max-width: 768px) {
 				.ui.fixed.menu {
 					display: none !important;
@@ -67,14 +68,14 @@
 					font-size: 1.5em;
 				}
 			}
-			
+
 			#container {
 				padding-top: 32px;
 				min-height: 300px;
 				word-break: break-all;
 				text-align: justify;
 			}
-			
+
 			#overlay {
 				float: left;
 				z-index: 9999;
@@ -82,7 +83,7 @@
 				right: 12px;
 				bottom: 5%;
 			}
-			
+
 			.new{
 				color: #DB2828;
 			}
@@ -97,7 +98,15 @@
 			<a data-view="wechat" class="item" href="?catelog=wechat">WeChat</a>
 			<a data-view="admin" class="item" href="?catelog=admin">Admin</a>
 			<a data-view="web" class="item" href="?catelog=web">Web</a>
-			<a data-view="renew" class="item" href="?catelog=renew">升级狂欢</a>
+			<div class="ui pointing dropdown item">
+  			<div class="text">运营活动</div>
+  			<i class="dropdown icon"></i>
+  			<div class="menu">
+					<a data-view="renew" class="item" href="?catelog=renew">升级狂欢</a>
+					<a data-view="party_2016" class="item" href="?catelog=party_2016">友邻同学聚会</a>
+				</div>
+			</div>
+			<!-- <a data-view="renew" class="item" href="?catelog=renew">升级狂欢</a> -->
 		</div>
 
 		<div class="pusher">
@@ -139,8 +148,10 @@
 				$.ajaxSetup({
 					cache: false
 				});
+
 				// 生成菜单
 				$('.ui.sidebar').sidebar('attach events', '.toc.item');
+
 				$('.ui.menu[data-type="menu"]:not(".sidebar")').append($('.ui.menu.sidebar[data-type="menu"]').html());
 				// 回到顶部
 				(function() {
@@ -158,6 +169,12 @@
 						}
 					};
 				})()
+
+				$('.ui.dropdown').dropdown({
+    			allowAdditions: true,
+					on:'hover',
+  			});
+
 				// 切换内容
 				$('.ui.menu[data-type="menu"]').on('click', '.item[data-id]', function() {
 					var self = $(this);

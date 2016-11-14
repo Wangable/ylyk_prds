@@ -1,9 +1,9 @@
 <meta charset="utf-8" />
-<h2>会员购买功能</h2>
+<h2>会员购买体系</h2>
 
 <h3>概述</h3>
 <ol class="ui list">
-	<li>友邻优课微信端的会员购买功能主要分为如下三个部分：
+	<li>友邻优课微信端的会员购买体系主要分为如下三个部分：
 		<ol>
 			<li>新手报名：非会员报名通道；</li>
 			<li>会员续费：会员续费通道；</li>
@@ -13,19 +13,35 @@
 	<li>因AppStore相关限制，微信端会员购买功能目前为友邻优课<mark>唯一</mark>加入会员通道；</li>
 </ol>
 
-<h3>赠送好友功能概述</h3>
+<h3>赠送好友</h3>
+<h4>描述</h4>
 <ol class="ui list">
-		<li>选择类别：
+		<li>填写购买信息：
 			<ol>
-				<li>虚拟卡价格1198元/年，送出后收礼人点击链接直接领取，并获取从领取当天起的365天会员资格；</li>
-				<li>实体卡+50元制作费，支付后顺丰发货，至收货地址；</li>
-			</ol></li>
-		<li>支付成功后，微信公众号提示：“您的礼品卡已支付成功，快去送ta吧~也可以在“个人中心”-“我的礼品卡”中查看哟”</li>
+				<li>选择类别：
+					<ol>
+						<li>【虚拟卡】价格1198元/年，送出后收礼人点击链接直接领取，并获取从领取当天起的365天会员资格；</li>
+						<li>【实体卡】+50元制作费，支付后顺丰发货，至收货地址；</li>
+					</ol>
+				</li>
+				<li>填写邮寄地址：包括【收礼人】（文本）、【联系电话】（默认键盘为Number）、【地区】（选择）、【详细地址】4项。若选择虚拟卡则无此项；</li>
+				<li>填写赠言（限制100字，默认文字为：“希望优秀的你和我一起学英文，睁眼看世界。”）；</li>
+				<li>空值警告：请填写XXX（XXX为值是空的项目名）；</li>
+			</ol>
+		</li>
+		<li>填写后进行支付；</li>
+		<li>支付成功后：
+			<ol>
+				<li>若选择【虚拟卡】，则进入“选择礼品卡”页面，挑选样式，并发送给好友；</li>
+				<li>若选择【实体卡】，则进入成功提示页面，标题：“购买成功”，描述：“预计7个工作日内到货，发货后会在友邻优课公众号提醒你哟~”；</li>
+				<li>微信公众号提示：“您的礼品卡已支付成功，快去送ta吧~也可以在“个人中心”-“我的礼品卡”中查看哟”；</li>
+			</ol>
 		<li>个人中心加入“我的礼品卡”入口，用于存放用户送出和收到的礼品卡，具体见原型图；</li>
-		<li>领取后给送礼人微信公众号推送一句“您的好友 xx 已领取您的高端体验卡。再送一张”</li>
+		<li>领取后给送礼人微信公众号推送一段文字：“您的好友 xx 已领取您的高端体验卡。<u>再送一张</u>”，点击再送一张后进入填写购买信息页面；</li>
+		<li>礼品卡仅限会员购买，不可自己使用，送礼人领取礼物提示“不能自己领取哟，快把礼物转发给你的好友吧~”。</li>
 </ol>
 
-<h3>流程图</h3>
+<h4>流程图</h4>
 <ol class="ui list">
 	<li>送礼及收礼流程：
 		<a href="img/prototype/wechat/gift-flow.png" target="_blank">
@@ -34,7 +50,7 @@
 	</li>
 </ol>
 
-<h3>页面原型</h3>
+<h4>页面原型</h4>
 <ol class="ui list">
 	<li>【公众号主页】界面原型图如下：
 		<a href="img/prototype/wechat/wechat-main.png" target="_blank">
@@ -66,4 +82,51 @@
 			<img class="ui bordered image" src="img/prototype/wechat/my-gift.png" />
 		</a>
 	</li>
+</ol>
+
+<h3>新手购买</h3>
+<h4>描述</h4>
+<ol class="ui list">
+		<li>查看友邻优课介绍：
+			<ol>
+				<li>具有代表性的大图（480*270）；</li>
+				<li>标题及价格；</li>
+				<li>英语学习平台；</li>
+				<li>超级名师；</li>
+				<li>全球经典素材；</li>
+				<li>报名学习流程；</li>
+			</ol>
+		</li>
+		<li>确认购买信息：
+			<ol>
+				<li>选择购买时长：默认为1年，点击减号变为“半年”，点击加号变为“2年”（最多2年）；</li>
+				<li>使用优惠码：此项默认为关闭状态，关闭时不显示输入框；打开后用户可以输入优惠码，根据优惠码进行相应的折扣减免，并将支付金额*对应比例计入相应优惠码的渠道商分红。</li>
+				<li>左下角金额数字随着购买时长的变化而变化，价格从低到高分别为：799、1198、2396；</li>
+			</ol>
+		<li>支付成功后引导用户加小答应为微信好友，用户随时进入此成功页面均可显示他的“昵称”、“地区”及“到期时间”3项信息；</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【新手加入】界面原型图如下：
+		<a href="img/prototype/wechat/new-purchase.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/new-purchase.png" />
+		</a>
+	</li>
+	<li>【确认信息】界面原型图如下：
+		<a href="img/prototype/wechat/new-confirm.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/new-confirm.png" />
+		</a>
+	</li>
+	<li>【支付成功】界面原型图如下(文字待定)：
+		<a href="img/prototype/wechat/new-success.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/wechat/new-success.png" />
+		</a>
+	</li>
+</ol>
+
+<h3>会员续费</h3>
+<h4>描述</h4>
+<ol class="ui list">
+		<li>暂时同续费抢购选择套餐页面；</li>
 </ol>
