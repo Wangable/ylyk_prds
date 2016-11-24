@@ -1,17 +1,20 @@
 <meta charset="utf-8" />
 <h2 id="知识模块">知识模块</h2>
-
-
+<h3>模块概述</h3>
+<p>　　知识模块的内容由专辑以及各专辑下对应的节目组成。模块在节目【播放】的基础上，提供了节目的【下载】、【喜欢】、和在节目下【写心得】的功能</p>
 
 <h3 id="流程图-1">流程图</h3>
 
-
-
+	<a href="img/prototype/app/flowchart2.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/flowchart2.jpg" />
+	</a>
 <h3 id="知识页">知识页</h3>
 
 <p>　　知识页面由上而下分为banner、专辑、节目三个栏目。</p>
 
-
+	<a href="img/prototype/app/knowledge.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/knowledge.jpg" />
+	</a>
 
 <h4 id="banner">banner：</h4>
 
@@ -23,7 +26,8 @@
 
 <h4 id="节目">节目：</h4>
 
-<ul><li>未登录或非会员状态下，节目栏目title为“每日提升 | 免费”，栏目内显示免费专辑中的全部节目，按照时间倒序排列。</li>
+<ul><li>未登录或非会员状态下，节目栏目title为“每日提升 | 免费”，栏目内显示免费专辑中的全部节目，按照时间倒序排列。栏目下的节目为标记为免费的节目，供非会员和未登录用户收听</li>
+	
 <li><p>会员状态下，该栏目title为“最新节目”，栏目内显示会员专辑中的全部节目，按照时间倒序排列。</p>
 
 <p>　　点击节目跳转到节目播放页。节目默认一次加载5个，上拉加载时显示“正在加载”，如已加载完全部节目，文字提示“没有更多节目了”。</p></li>
@@ -33,20 +37,28 @@
 
 <p>　　点击知识页【全部】，跳转到全部专辑页面。</p>
 
-
-
+	<a href="img/prototype/app/album-all.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/album-all.jpg" />
+	</a>
+	<p>　　全部专辑中包含一个对所有用户隐藏的免费专辑，专辑中所有节目均标记为免费，显示于“每日提升 | 免费”下</p>
 <h3 id="专辑详情">专辑详情</h3>
 
 <p>　　点击精选专辑或专辑目录中的专辑，跳转到专辑详情页。详情页有两个分页，专辑目录和专辑简介。</p>
 
 <h4 id="专辑简介">专辑简介</h4>
 
+	<a href="img/prototype/app/album-intro.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/album-intro.jpg" />
+	</a>
 <p>　　点击老师跳转到老师介绍页。</p>
-
 
 
 <h4 id="专辑目录">专辑目录</h4>
 
+
+	<a href="img/prototype/app/album-list.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/album-list.jpg" />
+	</a>
 <p>　　专辑目录页显示该专辑下的全部课程，按照时间倒序排列，并按照月份划分。点击月份收起该月份下的课程，再次点击则展开课程。 <br>
 　　 <br>
 　　上拉加载课程，一次加载10个（最多10个），加载时下方提示文案：上拉加载更多/正在加载节目/没有更多节目了。（如专辑下没有课程，提示文案“尚未上线，敬请期待”。） <br>
@@ -62,7 +74,6 @@
 <li>如当前登录为会员账号，则添加该课程到下载列表中，节目下显示课程的下载进度（动画效果如右所示）。用户可到个人中心–&gt;下载管理查看。下载完成后toast“已下载，请到下载管理中查看”</li>
 </ul>
 
-<hr>
 
 <p>　　点击节目跳转到节目播放页。</p>
 
@@ -75,7 +86,10 @@
 <h3 id="节目播放">节目播放</h3>
 
 
-
+	<a href="img/prototype/app/course-player.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/course-player.jpg" />
+	</a>
+	
 <h4 id="喜欢">【喜欢】</h4>
 
 <ul><li>如用户未登录，点击【喜欢】跳转到登录页。</li>
@@ -113,6 +127,9 @@
 
 <p>　　点击节目播放页【写心得】按钮或在播放完的提示点击【确定】弹出写心得页面。</p>
 
+	<a href="img/prototype/app/write.jpg" target="_blank">
+		<img class="ui bordered image" src="img/prototype/app/write.jpg" />
+	</a>
 
 
 <h4 id="定位">定位：</h4>
@@ -137,7 +154,6 @@
 <li>如心得有内容或选择了图片，则上传心得，并根据上传情况提示“图片处理中”–&gt;“上传中，请不要关闭该页面”，同时显示上传进度。</li>
 </ul>
 
-<hr>
 
 <p>　　如发布成功，则跳转到该节目的心得列表（页面title为发布成功），同时该心得添加到该节目下。如发布失败，提示toast“发布失败”。 <br>
 　　 <br>
