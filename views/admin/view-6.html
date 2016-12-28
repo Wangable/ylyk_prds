@@ -29,7 +29,8 @@
 <h4>用户详情</h4>
 <ol class="ui list">
 	<li>左上角显示指定用户的头像、姓名、一句话介绍，方便运营人员识别用户；</li>
-	<li>上方显示【连续打卡】、【关注】、【粉丝】和【优币】四项数据；</li>
+	<li>上方显示【连续打卡】、【关注】、【粉丝】、【优币】和<mark>【心得】</mark>五项数据；</li>
+	<li>点击【关注】或【粉丝】</li>
 	<li>个人资料：运营人员可以编辑此项内的所有信息，点击右上角编辑按钮后显示弹出层进行修改，具体包括以下内容：
 		<ol>
 			<li>昵称</li>
@@ -61,13 +62,60 @@
 <h4>页面原型</h4>
 <ol class="ui list">
 	<li>【用户列表】界面原型图如下：
-		<a href="img/prototype/admin/user-list.png" target="_blank">
+		<a href="img/prototype/admin/user/user-list.png" target="_blank">
 			<img class="ui bordered image" src="img/prototype/admin/user-list.png" />
 		</a>
 	</li>
-	<li>【用户详情】界面原型图如下：
-		<a href="img/prototype/admin/user-info.png" target="_blank">
+	<li>【用户详情】界面原型图如下<mark>有更新</mark>：
+		<a href="img/prototype/admin/user/user-info.png" target="_blank">
 			<img class="ui bordered image" src="img/prototype/admin/user-info.png" />
+		</a>
+	</li>
+</ol>
+
+<h3>用户档案</h3>
+<p>用户档案为便于客服团队工作人员对学员/用户进行精细化运营而设计，主要包括【标签】、【描述】和【常用工具】三个功能；与用户信息用中间有内容的分割线（ui divider）分开</p>
+
+<h4>标签</h4>
+<ol class="ui list">
+	<li>标签可以从标签库中选择，也可以由客服人员随时添加，新增的标签自动进入标签库；</li>
+	<li>使用可以输入内容搜索的选择框，每次单选（semantic有相应的dropdown类）；</li>
+	<li>举例：想添加“好学生”标签，用户输入“好”字即开始搜索标签库中好字开头的标签，若输入后发现标签库中没有此内容，则提示“新增标签【好学生】”，点击后【好学生】标签即录入标签库；</li>
+</ol>
+
+<h4>描述</h4>
+<ol class="ui list">
+	<li>以留言板的方式记录不同客服对用户的描述；</li>
+	<li>信息包括：管理员头像、姓名、提交时间、提交内容；可以删除自己添加的描述；</li>
+	<li>每条描述只能是纯文字，字数可不做限制；</li>
+</ol>
+
+<h4>常用工具</h4>
+<p>常用工具是客服人员用于维护用户的小工具，会不断增加，目前有：【学习建议】、【学习总结】两个</p>
+<ol class="ui list">学习建议：
+	<li>客服人员和选择【用户身份】、【兴趣爱好】、【学习时长】信息，选填【个性建议】，若不填则在确认信息中显示默认文字；</li>
+	<li>选择后点击【生成建议】按钮，客服人员可以在右侧生成的建议基础上进行调整，同时将上述标签自动添加到用户标签中；</li>
+	<li>调整后点击【生成图片】按钮，上一个modal消失，出现新modal显示个性化学习建议图；</li>
+	<li>点击【下载图片】按钮，即下载一张学员个性化学习建议图，客服人员可发送给学员；</li>
+	<li>曾经生成过学习建议图的用户，点击常用工具中的【生成学习建议】按钮后，进入含有建议图的页面，若点击【重新生成】按钮，则进入选择信息界面；</li>
+	<li>重新选择信息并生成建议时，无需修改之前的标签（第2点中描述的），新增相应的标签即可；</li>
+</ol>
+
+<h4>页面原型</h4>
+<ol class="ui list">
+	<li>【粉丝列表】界面原型图如下：
+		<a href="img/prototype/admin/user/user-info-fans.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/user/user-info-fans.png" />
+		</a>
+	</li>
+	<li>【生成学习建议】界面原型图如下：
+		<a href="img/prototype/admin/user/user-info-suggest.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/user/user-info-suggest.png" />
+		</a>
+	</li>
+	<li>【查看学习建议】界面原型图如下：
+		<a href="img/prototype/admin/user/user-info-suggest-info.png" target="_blank">
+			<img class="ui bordered image" src="img/prototype/admin/user/user-info-suggest-info.png" />
 		</a>
 	</li>
 </ol>
