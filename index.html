@@ -20,32 +20,32 @@
 			html.ios body {
 				height: 100%!important;
 			}
-
+			
 			.secondary.pointing.menu .toc.item {
 				display: none;
 			}
-
+			
 			.masthead.segment {
 				min-height: 700px;
 				padding: 1em 0em;
 			}
-
+			
 			.masthead .ui.menu .ui.button {
 				margin-left: 0.5em;
 			}
-
+			
 			.masthead h1.ui.header {
 				margin-top: 3em;
 				margin-bottom: 0em;
 				font-size: 4em;
 				font-weight: normal;
 			}
-
+			
 			.masthead h2 {
 				font-size: 1.7em;
 				font-weight: normal;
 			}
-
+			
 			@media only screen and (max-width: 768px) {
 				.ui.fixed.menu {
 					display: none !important;
@@ -68,14 +68,14 @@
 					font-size: 1.5em;
 				}
 			}
-
+			
 			#container {
 				padding-top: 32px;
 				min-height: 300px;
 				word-break: break-all;
 				text-align: justify;
 			}
-
+			
 			#overlay {
 				float: left;
 				z-index: 9999;
@@ -83,8 +83,8 @@
 				right: 12px;
 				bottom: 5%;
 			}
-
-			.new{
+			
+			.new {
 				color: #DB2828;
 			}
 		</style>
@@ -94,14 +94,22 @@
 		<div class="ui vertical sidebar menu" data-type="menu">
 			<a data-view="home" class="item" href="?catelog=home">首页</a>
 			<a data-view="frame" class="item" href="?catelog=frame">产品架构</a>
+			<div class="ui pointing dropdown item">
+				<div class="text">App</div>
+				<i class="dropdown icon"></i>
+				<div class="menu">
+					<a data-view="app2.0" class="item" href="?catelog=app2.0">2.0</a>
+					<a data-view="app1.0" class="item" href="?catelog=app1.0">1.0</a>
+				</div>
+			</div>
 			<a data-view="app" class="item" href="?catelog=app">App</a>
 			<a data-view="wechat" class="item" href="?catelog=wechat">WeChat</a>
 			<a data-view="admin" class="item" href="?catelog=admin">Admin</a>
 			<a data-view="web" class="item" href="?catelog=web">Web</a>
 			<div class="ui pointing dropdown item">
-  			<div class="text">运营活动</div>
-  			<i class="dropdown icon"></i>
-  			<div class="menu">
+				<div class="text">运营活动</div>
+				<i class="dropdown icon"></i>
+				<div class="menu">
 					<a data-view="renew" class="item" href="?catelog=renew">升级狂欢</a>
 					<a data-view="party_2016" class="item" href="?catelog=party_2016">友邻同学会</a>
 				</div>
@@ -171,9 +179,9 @@
 				})()
 
 				$('.ui.dropdown').dropdown({
-    			allowAdditions: true,
-					on:'hover',
-  			});
+					allowAdditions: true,
+					on: 'hover',
+				});
 
 				// 切换内容
 				$('.ui.menu[data-type="menu"]').on('click', '.item[data-id]', function() {
