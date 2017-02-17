@@ -139,6 +139,11 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="ui long modal show_image" style="background-color: transparent;box-shadow: none;">
+			<i class="close icon"></i>
+			<img src="" style="display: block; margin-left: auto; margin-right: auto;" />
+		</div>
 		<script type="text/javascript" src="libs/jquery/jquery.js"></script>
 		<script type="text/javascript" src="libs/semantic-ui/semantic.js"></script>
 		<script type="text/javascript" src="libs/highlight/highlight.pack.js"></script>
@@ -161,6 +166,7 @@
 				$('.ui.sidebar').sidebar('attach events', '.toc.item');
 
 				$('.ui.menu[data-type="menu"]:not(".sidebar")').append($('.ui.menu.sidebar[data-type="menu"]').html());
+				
 				// 回到顶部
 				(function() {
 					var overlay = $('#overlay');

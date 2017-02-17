@@ -14,8 +14,9 @@ function getUrlParameter(param){
 /**
  * 加载文档。
  * @param {String} view
+ * @param {Function} callback
  */
-function loadDocument(view){
+function loadDocument(view, callback){
 	/**
 	 * 生成锚点
 	 */
@@ -88,6 +89,7 @@ function loadDocument(view){
 				}
 				// 结束加载
 				content.removeClass('loading');
+				callback && callback();
 			});
 		} else {
 			var title = $('.ui.accordion > .title[data-id="' + viewId + '"]');
