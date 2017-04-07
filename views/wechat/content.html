@@ -46,8 +46,28 @@
 			<div class="title" data-id="5"><i class="dropdown icon"></i>免费体验体系</div>
 			<div class="content">
 				<div class="ui list">
+					<a class="item">概述</a>
 					<a class="item">免费课程</a>
 					<a class="item">社群展示</a>
+				</div>
+			</div>
+			<div class="title" data-id="6"><i class="dropdown icon"></i>五日提升计划</div>
+			<div class="content">
+				<div class="ui list">
+					<a class="item">概述</a>
+					<a class="item">活动流程图</a>
+					<a class="item">信息结构图</a>
+					<a class="item">活动介绍</a>
+					<a class="item">自动回复</a>
+					<a class="item">活动报名</a>
+					<a class="item">付款方式</a>
+					<a class="item">绑定联系方式</a>
+					<a class="item">课程目录</a>
+					<a class="item">领取证书</a>
+					<a class="item">上课提醒</a>
+					<a class="item">活动列表</a>
+					<a class="item">我的押金</a>
+					<a class="item">附录</a>
 				</div>
 			</div>
 		</div>
@@ -56,6 +76,31 @@
 	</div>
 </div>
 
-<script>
-	loadDocument('wechat');
-</script>
+
+<script>loadDocument('wechat', function() {
+	$('.ui.app.image').click(function() {
+		var src = $(this).context.src;
+		$('.show_image img').attr('src', src)
+		$('.ui.modal').modal({
+			className: {
+				scrolling: 'scrolling',
+			},
+			observeChanges: true
+		}).modal('show');
+	});
+});</script>
+<script type="text/javascript">autodivheight();
+
+function autodivheight() {
+
+	var winHeight = 0;
+	if(window.innerHeight)
+		winHeight = window.innerHeight;
+	else if((document.body) && (document.body.clientHeight))
+		winHeight = document.body.clientHeight;
+
+	if(document.documentElement && document.documentElement.clientHeight)
+		winHeight = document.documentElement.clientHeight;
+//	document.getElementById("hhh").style.height = (winHeight - 70) + "px";
+}
+window.onresize = autodivheight;</script>

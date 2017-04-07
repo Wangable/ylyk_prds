@@ -1,25 +1,49 @@
 <meta charset="utf-8" />
-<h2>同学资料模块</h2>
-<h3>概述</h3>
-<h3>同学资料页</h3>
-<p>需要包含的内容有：</p>
+<style>
+	p{
+    text-indent:2em; 
+}
+</style>
+<h2>其他需求</h2>
+<h3>启动页</h3>
+<p>下左图为默认启动页，右图为更换启动页的通用样式。</p>
+<div style="float:left;margin-right:50px;">
+	<img class="ui app image" src="img/prototype/app2.0/sth/start1.jpg" /></div>
+<img class="ui app image" src="img/prototype/app2.0/sth/start2.jpg" />
+
+<h3>介绍页</h3>
+<p>pending...</p>
+
+<!--<h3>获取通知权限</h3>
+<p>打开通知，有好课上线就可以第一时间通知你了</p>-->
+<h3>新手引导</h3>
+<p>新书引导仅向会员展示。在同一页面上的多张新手引导图，点击依次消失。</p>
+<h4>首页</h4>
 <ol>
-	<li>用户的头像、昵称、一句话介绍、等级。点击头像可查看大图。</li>
-	<li>性别（以图标显示）、地区、年龄</li>
-	<li>关注数、粉丝数、学习时长</li>
-	<li>心得数以及心得预览，心得按照时间倒序显示，默认显示最新的5个，可上拉加载。</li>
+	<li>左滑可查看上一天更新</li>
+	<li>当日已学习的时间</li>
 </ol>
 
-<img class="ui app image" src="img/prototype/app2.0/others/otherinfo.jpg" />
+<h4>学习日历</h4>
+<ol>
+	<li>学满30分钟自动标记打卡。</li>
+	<li>点击日期查看当日学习情况。</li>
+</ol>
 
-<h3>|　关注</h3>
+<h4>播放页引导</h4>
 <ol>
-	<li>点击【关注】按钮则关注该用户，【关注】变成【已关注】。</li>
-	<li>点击【已关注】，提示“确认取消关注吗”确认 取消</li>
+	<li>点击查看播放列表</li>
+	<li>随时记录你的心得</li>
 </ol>
-<p>　　</p>
-<h3>|　加好友</h3>
-<ol>
-<li>点击加好友，复制该用户的微信号到剪贴板，同时提示“已复制微信号到剪贴板”取消 打开微信。点击打开微信则调出微信。</li>
-<li>若该用户未填写微信号，则提示“该用户尚未填写微信号”</li>
-</ol>
+
+<img class="ui app image" src="img/prototype/app2.0/sth/buyfinish.jpg" />
+<h3>上拉加载&下拉刷新</h3>
+<h4>上拉加载</h4>
+<p>文案：1.上拉显示更多2.加载中…</p>
+<p>P.S.上拉加载无更多内容时，则不显示上拉加载。</p>
+<h4>下拉刷新</h4>
+<p>文案：1.下拉刷新2.松开刷新3.更新中..</p>
+<p>可下拉刷新的页面：首页、课程、心得（关注、发现）、心得列表、粉丝、关注、我赞过的（课程、心得）、心得详情、专辑详情、同学资料页、学习轨迹。</p>
+
+<h3>数据加载动画</h3>
+<img class="ui app image" src="img/prototype/app2.0/sth/loading.png" />
