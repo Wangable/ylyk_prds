@@ -26,6 +26,10 @@ code:after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
+.prd-desc {
+  background-color: #ffffdd;
+  padding: 0.5em;
+}
 .document .ui.list .item {
   padding-left: 24px;
   line-height: 1.6;
