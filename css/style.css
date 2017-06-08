@@ -26,9 +26,6 @@ code:after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
-img.ui.app.image {
-  max-width: 100% !important;
-}
 .prd-desc {
   background-color: #ffffdd;
   padding: 0.5em;
