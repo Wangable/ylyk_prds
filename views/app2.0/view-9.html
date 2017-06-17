@@ -1,59 +1,63 @@
-<meta charset="UTF-8">
-<style>
-	img{
-		height:500px!important;
+<script type="text/javascript">
+	function show() {
+		var a = $(event.target).parent().attr("id");
+		$("#" + a).load("views/app2.0/table.html #" + a);
 	}
-</style>
+	//		$("#" + "quanxian").load("views/app2.0/table.html #" + "quanxian");
+	//		$("#" + "rukou").load("views/app2.0/table.html #" + "rukou");
+</script>
+<meta charset="UTF-8">
 <h2>新课程体系</h2>
 <h3>概述</h3>
 <p>友邻优课在2017年5月战略方向调整后对课程进行了重新梳理，新体系将英语学习从口语发音的基本功到英语自由划分为9个部分，帮助英语学习者通过品读世界经典素材（图书、新闻、诗歌等）真正提升英语能力，实现英语自由。</p>
-<h3>购买流程</h3>
-<img class="ui app image" style="height: 300px!important;" src="img/prototype/app2.0/buyflow.png" />
-<h3>购买入口</h3>
-<table class="ui center aligned celled table">
+<h4>新会员体系</h4>
+<table class="ui center aligned celled structured table">
 	<thead>
 		<tr>
-			<th class="one wide">入口</th>
-			<th class="one wide">跳转页面</th>
-			<th class="one wide">谁能看到</th>
-			<th class="four wide">备注</th>
+			<th>用户身份</th>
+			<th>价格</th>
+			<th>专辑的收听权限</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>非会员【立即入学】按钮</td>
-			<td>
-				<a href="javascript:a('9_4');">介绍页</a>
-			</td>
-			<td>非会员</td>
-			<td>非学员点击课程及其他需要会员资格的地方，提示alert按钮【立即入学】、【咨询阿树老师】、【取消】。点击【立即入学】跳转介绍页。</td>
+			<td>免费用户</td>
+			<td>/</td>
+			<td>仅免费专辑</td>
 		</tr>
 		<tr>
-			<td>课程页banner</td>
-			<td>
-				<a href="javascript:a('9_4');">介绍页</a>
-			</td>
-			<td>非会员</td>
-			<td>该banner仅对非会员展示。</td>
+			<td>基础课程版</td>
+			<td>¥1790/年</td>
+			<td>新课程专辑+免费专辑</td>
 		</tr>
 		<tr>
-			<td>专辑页【立即报名】</td>
-			<td>
-				<a href="javascript:a('9_5');">选择套餐页</a>
-			</td>
-			<td>非会员</td>
-			<td>对于非会员，所有专辑页底部均固定显示【咨询阿树老师】&【立即报名按钮】按钮。如是会员，则不显示。</td>
+			<td>巩固提升版</td>
+			<td>¥2390/年</td>
+			<td>每日新闻专辑</td>
 		</tr>
 		<tr>
-			<td>同学权益页【立即升级】</td>
-			<td>
-				<a href="javascript:a('9_6');">支付页</a>
-			</td>
-			<td>会员</td>
-			<td>会员无需购买基础课程版，点击【立即升级】跳转到终身会员版。如用户已是终身会员，则隐藏【立即升级】按钮。</td>
+			<td>终身会员</td>
+			<td>¥5990/年</td>
+			<td>已知的所有专辑</td>
 		</tr>
 	</tbody>
 </table>
+<h4>需求清单</h4>
+<div id="xuqiu">
+	<a onclick="show()">查看需求清单</a>
+</div>
+
+<h3>购买路径</h3>
+<p>注：流程图及文案中1198指代有期限的终身会员、1790指代基础课程版会员、2390指代巩固提升版会员、5990指代终身会员。</p>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/sell.jpg" />
+<h3>购买入口</h3>
+<div id="rukou">
+	<a onclick="show()">查看购买入口</a>
+</div>
+<h3>用户收听权限</h3>
+<div id="quanxian">
+	<a onclick="show()">查看用户收听权限</a>
+</div>
 
 <h3>介绍页</h3>
 <ol>
@@ -65,113 +69,150 @@
 		</ul>
 	</li>
 </ol>
-<div style="float:left;margin-right:50px;">
-	<img class="ui app image" src="img/prototype/app2.0/newbuy/introduce1.jpg" /></div>
-<img class="ui app image" src="img/prototype/app2.0/newbuy/introduce2.jpg" />
+<div style="float:left;margin-right:200px;">
+	<img class="ui app image" src="img/prototype/wechat/tree/intro.png"></div>
+<img class="ui app image" src="img/prototype/wechat/tree/courses.png">
 
 <h4>简介</h4>
-<p>简介页面主要为图片展示，点击部分图片可播放视频。</p>
-<h4>课程</h4>
-<p>课程页展示tree课程体系。</p>
 <ol>
-	<li>试听：点击则跳转到播放页，播放固定课程。
-		<table class="ui center aligned celled structured table">
-			<thead>
-				<tr>
-					<th class="one wide">课程名</th>
-					<th class="one wide">id</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>\</th>
-					<th>\</th>
-				</tr>
-				
-			</tbody>
-		</table>
-	</li>
-	<li>专辑：点击跳转到对应的专辑详情页面。</li>
-	<li>老师头像：点击跳转到对应的老师介绍页。</li>
+	<li>简介页面主要为图片展示。</li>
+	<li>点击部分图片可播放视频。视频播放地址为：</li>
+	<li>页面最下方为常见问题，点击问题则展开回答。文案如下：pending...</li>
 </ol>
+<h4>课程</h4>
+<p>TREE分为4个能力模块,每个模块对应一个分页。分页上有如下交互：</p>
+<ol>
+	<li><b>学习理由</b>：点击【学习该模块的x大理由】，则展开学习理由。再次点击则收起。</li>
+	<li><b>试听</b>：点击则跳转到播放页，播放固定课程。
+		<ul>
+			<li>我做买卖不是为了钱：id</li>
+			<li>哈利波特的中年危机：id</li>
+		</ul>
+	</li>
+	<li><b>专辑名</b>：点击跳转到对应的专辑详情页面。</li>
+	<li><b>老师头像</b>：点击跳转到对应的老师介绍页。</li>
+</ol>
+
+</ol>-->
 <h3>选择套餐</h3>
 <ol>
-	<li>套餐分为<b>基础课程版</b>和<b>终身学习版</b>，<b style="color: red;">跳转该页面始终默认打开终身学习版（重要）</b>。</li>
-	<li>【立即开通】：固定显示于选择套餐页底部，点击跳转到已选择套餐的<b>支付页</b></li>
+	<li>套餐分为<b>巩固提升版</b>、<b>基础课程版</b>和<b>终身学习版</b>，<b style="color: #b41930;">跳转该页面始终默认打开终身学习版</b>。</li>
+	<li>【立即开通】：固定显示于选择套餐页底部
+		<div id="lujing">
+			<a onclick="show()">查看点击立即开通时的文案</a>
+		</div>
+	</li>
 </ol>
-<table class="ui center aligned celled table">
-	<thead>
-		<tr>
-			<th></th>
-			<th>能力进阶版</th>
-			<th>终身学习版</th>
-		</tr>
-	</thead>
-	<tr>
-		<td>权益</td>
-		<td>体验版权益+友邻金融分期特权</td>
-		<td>基础课程版权益+外媒新闻每日解读+终身学习者专属课+终身学习者专属社群+终身学习者专属讲义+线下活动优先参与权+专人规划师+好友礼品卡价值¥1790</td>
-	</tr>
-
-</table>
+<div class="ui three columns grid">
+	<div class="ui column">
+		<img class="ui app image" src="img/prototype/wechat/tree/pay-try.png">
+	</div>
+	<div class="ui column">
+		<img class="ui app image" src="img/prototype/wechat/tree/pay-basic.png">
+	</div>
+	<div class="ui column">
+		<img class="ui app image" src="img/prototype/wechat/tree/pay-lifelong.png">
+	</div>
+</div>
+<h3>权益文案</h3>
 <p>点击权益则弹窗显示权益的具体内容。</p>
-<h4>基础课程版</h4>
-
-	<p>若用户是<b>未购买终身学习版的会员</b>，则当其选择基础课程版时，提示alert<mark>您无需购买能力进阶课程，推荐您升级为友邻优课终身学习者。</mark> <mark>立即升级</mark>。</p>
-
-<h4>终身学习版</h4>
-
-	<p>当会员选择终身学习版并点击【立即开通】时，提示文案如下：<br />
-		<mark>亲爱的友邻同学：<br />未来我们将举办升级活动。根据您在友邻优课的学习情况估算，您有机会获得一定金额的代金券。请联系您通讯录中的阿树老师或小答应了解详情。<br /><b>我是土豪，拒绝优惠</b></mark><mark><b>去咨询阿树老师</b><br /></mark>
-		<ul>
-			<li>【我是土豪，拒绝优惠】:点击跳转到对应套餐的支付页。</li>
-			<li>【去咨询阿树老师】：点击跳转到微信。</li>
-		</ul>
-	</p>
-<div style="float:left;margin-right:50px;">
-	<img class="ui app image" src="img/prototype/app2.0/newbuy/zhongshen.jpg" /></div>
-<img class="ui app image" src="img/prototype/app2.0/newbuy/jichu.jpg" />
-
+<div id="quanyi">
+	<a onclick="show()">查看权益文案</a>
+</div>
 
 <h3>支付页</h3>
-<p>支付页显示要购买的套餐信息。同时选择收货地址和支付方式。</p>
+<p>支付页显示要购买的套餐信息。用户需选择收货地址和支付方式。</p>
 
 <h4>选择地址</h4>
+<p>选择地址流程如下</p>
+<img class="ui app image" style="height:400px" src="img/prototype/app2.0/newbuy/addressflow.jpg" />
+
 <p>地址cell需显示的地址信息包括：<b>收货人</b>、<b>联系电话</b>、<b>地址</b>（由地区和详细地址拼接得到）</p>
+<div style="float:left;margin-right:50px;">
+	<img class="ui app image" src="img/prototype/app2.0/newbuy/newaddress.png" /></div>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/chooseaddress.png" />
 <ol>
 
-	<li>用户已有地址，并选择了默认地址：显示默认地址的信息。</li>
-	<li>用户已有地址，但未选择默认地址：显示文案<mark>请选择收货地址</mark>。</li>
-	<li>在用户已填写地址的情况下，点击地址cell均跳转到地址管理页面，页面title<mark>选择收货地址</mark>。用户点击选择地址后，自动返回支付页。显示用户已选择的地址。</li>
-	<li>用户无地址：提示文案<mark>新增收货地址</mark>，点击跳转到<b>收货地址</b>页面，页面title为<mark>新增收货地址</mark>。保存后返回支付页，显示填写的地址信息。</li>
+	<li><b>用户已有地址</b>：显示默认地址的信息。</li>
+	<li><b>已填写地址情况下</b>：点击地址cell跳转到地址管理页面。页面title<mark>选择收货地址</mark>。用户点击地址管理的地址可选择地址。选择后自动返回支付页。显示用户已选择的地址。</li>
+	<li><b>未填写地址情况下</b>：地址cell显示：<br />
+		<ol>
+			<li>终身会员：<mark>新增收货地址    填写地址可收到终身会员讲义+T.R.E.E课程讲义</mark></li>
+			<li>基础课程：<mark>新增收货地址    填写地址可收到T.R.E.E课程讲义</mark></li>
+		</ol>点击跳转到<b>收货地址</b>页面，页面title为<mark>新增收货地址</mark>。保存地址后返回支付页，显示填写的地址信息。</li>
 </ol>
-<div style="float:left;margin-right:50px;">
-	<img class="ui app image" src="img/prototype/app2.0/newbuy/pay5990.jpg" /></div>
-<img class="ui app image" src="img/prototype/app2.0/newbuy/pay1790.jpg" />
+
 <h4>支付方式</h4>
 <p>支付方式包括<b>微信支付</b>、<b>京东支付</b>和苹果支付（暂缓）。默认选择微信支付。</p>
 
 <h4>立即支付</h4>
 <ol>
 	<li>点击【立即支付】，如用户无收货地址，则提示toast<mark>请输入收货地址</mark>。如已填写地址，则唤起支付。</li>
-	<li>支付成功后，提示toast<mark>恭喜你支付成功</mark>。跳转页面。
+	<li>支付成功后。跳转<b>支付成功</b>页面。
 		<ul>
-			<li>如用户已填写手机号：则跳转到<b>学习管家</b>页面。页面title<mark>支付成功</mark>。</li>
+			<li>如用户已填写手机号：则跳转到<b>支付成功</b>页面。页面title<mark>支付成功</mark>。</li>
 			<li>如用户未填写手机号：跳转到学习管家页面后，再跳转到<b>绑定手机</b>页面，且不可返回。绑定完成后返回学习管家页面。</li>
 		</ul>
 	</li>
 </ol>
-<h3>新课程专辑</h3>
+<h3>支付成功</h3>
 <ol>
-	<li>入口：在课程页banner下方显示所有的新课程专辑（原每日新闻解读位置）。点击专辑跳转到新课程专辑详情页面。</li>
-	<li>倒计时：如新课程的专辑未上线，课程分页显示倒计时。如已上线，则显示新课程专辑的课程。</li>
-	<li>咨询&立即报名：如用户为非会员，则在新课程专辑详情页的下方，固定显示【咨询】和【立即报名】按钮。
+	<li><b>购买成功提示</b>：<mark>恭喜你已成为友邻优课终身学员（恭喜你成功购买友邻优课基础课程版）</mark></li>。
+	<li><b>副卡</b>：如购买的是终身会员，则购买成功文案下方显示<mark>获得价值1790元副卡，可至同学权益页面查看</mark>。点击【副卡】可跳转到<b>我的副卡</b>页面。</li>
+	<li><b>专属学习管家</b>：显示学习管家的头像、昵称、微信号。</li>
+	<li><b>加好友</b>：点击【加好友】。则提示<mark>[微信号]已复制到剪贴板，请到微信添加朋友页面粘贴并搜索</mark>取消 打开微信。点击【打开微信】则调出微信。</li>
+</ol>
+<img class="ui app image" src="img/prototype/app2.0/newbuy/paysuccess.png" />
+<h4>绑定手机</h4>
+<ol>
+	<li>跳转到<b>支付成功</b>页面后。如用户未填写手机号，则1s后跳转到绑定手机页面。并不提供返回按钮。</li>
+	<li>用户完成绑定或选择【海外用户入口】后即返回<b>支付成功</b>页面</li>
+</ol>
+<h3>我的副卡</h3>
+<p>当用户为终身会员时，<b>同学权益</b>页右上角显示我的副卡入口。点击跳转到<b>我的副卡</b>页面。</p>
+<ol>
+	<li>赠送给好友：点击【赠送给好友】即提示选择【分享给朋友】和【分享到朋友圈】。分享出去的文案与微信礼品卡相同</mark>
+	</li>
+	<li>若该礼品卡已被领取，则隐藏【赠送给好友】按钮，显示<mark>副卡已被xxx领取</mark></li>
+</ol>
+<h4>副卡文案：</h4>
+<mark>友邻优课终身会员副卡              </mark><br />
+<mark>副卡权益   200友邻优课基础课程 365天有效</mark><br />
+<mark>价值1790元</mark><br /><br />
+<h3>课程页修改</h3>
+<ol>
+	<li>在课程页banner下方显示所有的新课程专辑（原每日新闻解读位置）。点击专辑跳转到新课程专辑详情页面。</li>
+	<li>banner由原来的只区分会员和非会员，改为区分4种不同身份的会员。</li>
+</ol>
+<p></p>
+
+<h3>课程专辑修改</h3>
+
+<ol>
+	<li><b>倒计时</b>：如新课程专辑未上线，课程分页显示至7月1日0点的倒计时（如逾期未上线则显示为00:00:00）.如图所示。如已上线，则显示新课程专辑的课程。</li>
+	<li><b>咨询&立即报名</b>：如用户为非会员，则在新课程专辑详情页的下方，固定显示【咨询】和【立即报名】按钮。
 		<ul>
 			<li>【咨询】：点击跳转到<b>网易七鱼</b></li>
 			<li>【立即报名】：点击跳转到<b>介绍页</b></li>
 		</ul>
 	</li>
+	<li><b>立即升级</b>：如用户已购买1790或2390但未购买终身会员，则显示“所在无法收听该专辑” 立即升级。点击【立即升级】跳转到<b>选择套餐</b>页面。</li>
 </ol>
-<div style="float:left;margin-right:50px;">
-	<img class="ui app image" src="img/prototype/app2.0/newbuy/lesson.jpg" /></div>
-<img class="ui app image" src="img/prototype/app2.0/newbuy/album.jpg" />
+<img class="ui app image" src="img/prototype/app2.0/newbuy/album.png" />
+<h3>同学权益修改</h3>
+<ol>
+	<li>显示【套餐名称】【到期时间】。在用户只有一个套餐时：
+		<ol>
+			<li><b>终身会员</b>：<mark>您是尊贵的终身会员</mark></li>
+			<li><b>巩固提升版</b>:<mark>巩固提升版 到期时间：xxxx-xx-xx</mark></li>
+			<li><b>基础课程版</b>:<mark>基础课程版 到期时间：xxxx-xx-xx</mark></li>
+		</ol>
+	</li>
+	<li>在用户同时有多个套餐时，规则如下：
+		<ol>
+			<li><b>当套餐里有终身会员</b>：始终显示为<mark>您是尊贵的终身会员</mark>，并隐藏升级入口。</li>
+			<li><b>未购买终身会员，同时有巩固提升和基础课程</b>:<br /><mark>巩固提升版 到期时间：xxxx-xx-xx</mark><br /><mark>基础课程版 到期时间：xxxx-xx-xx。【立即升级】</mark></li>
+		</ol>
+	</li>
+	<li>同学权益页面右上角显示“我的副卡”，点击跳转到<b>我的副卡</b>页面</li>
+</ol>
