@@ -1,0 +1,60 @@
+<meta charset="utf-8" />
+<div class="ui stackable two column grid container document">
+	<div class="four wide column">
+		<div class="ui accordion">
+			<div class="title" data-id="1"><i class="dropdown icon"></i>概述</div>
+			<div class="content">
+				<div class="ui list">
+					<a class="item">概述</a>
+				</div>
+			</div>
+			<div class="title" data-id="2"><i class="dropdown icon"></i>设计规范</div>
+			<div class="content">
+				<div class="ui list">
+					<a class="item">V2.0</a>
+					<a class="item">V1.0</a>
+				</div>
+			</div>
+			<div class="title" data-id="3"><i class="dropdown icon"></i>常用网站</div>
+			<div class="content">
+				<div class="ui list">
+					<a class="item">图片素材</a>
+					<a class="item">优秀UI作品</a>
+					<a class="item">优秀网站</a>
+					<a class="item">图标库</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content" class="twelve wide column ui form">
+	</div>
+</div>
+
+
+<script>loadDocument('design', function() {
+	$('.ui.app.image').click(function() {
+		var src = $(this).context.src;
+		$('.show_image img').attr('src', src)
+		$('.ui.modal').modal({
+			className: {
+				scrolling: 'scrolling',
+			},
+			observeChanges: true
+		}).modal('show');
+	});
+});</script>
+<script type="text/javascript">autodivheight();
+
+function autodivheight() {
+
+	var winHeight = 0;
+	if(window.innerHeight)
+		winHeight = window.innerHeight;
+	else if((document.body) && (document.body.clientHeight))
+		winHeight = document.body.clientHeight;
+
+	if(document.documentElement && document.documentElement.clientHeight)
+		winHeight = document.documentElement.clientHeight;
+//	document.getElementById("hhh").style.height = (winHeight - 70) + "px";
+}
+window.onresize = autodivheight;</script>
