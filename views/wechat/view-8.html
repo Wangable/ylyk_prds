@@ -18,6 +18,7 @@
 		<li>免费用户：没有任何权益的用户；</li>
 		<li>付费用户：拥有任何一项权益的用户；</li>
 		<li>支付页：免费用户付费体验的页面；</li>
+		<li>支付成功页：免费用户支付成功后跳转的页面；</li>
 	</ul>
 </div>
 <!--关键流程-->
@@ -25,372 +26,83 @@
 <div>
 	<h4>体验流程</h4>
 	<ul class="ui list">
-		<li>付费用户：已有权益不变，引导成为终身会员；</li>
-		<li>非会员：可以选择转发海报免费参与，或付费成为学员；</li>
+		<li>付费用户：进入小程序提示页，提示小程序二维码；</li>
+		<li>免费用户：进入介绍页，支付成功后提示小程序二维码；</li>
 	</ul>
-	<p>购买流程图如下：</p>
-	<img class="ui app image" src="img/prototype/wechat/tree/purchase-flowchart.png" />
-
-	<h4>2.2 收听课程</h4>
-	<p>听课页面入口在公众号的【友邻同学】-【听课🎧】，购买成功后，在开课时间之前进入倒计时页面，到开课时间后点击则进入课程列表页面；</p>
-	<p>每次收听课程时，弹出提示框，提示用户要保证心无杂念、静心学习（<mark>文案等Nicole</mark>）；</p>
-
-	<h4>2.3 终身会员副卡赠送</h4>
-	<p>用户成为终身会员后，自动获赠一个1分钱购买¥1800礼品卡的资格，购买后可以转发送给好友。</p>
-	<img class="ui app image" src="img/prototype/wechat/tree/gift-flowchart.png" />
+	<p>流程图如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/flowchart.png" />
 </div>
-<!--课程介绍-->
-<h3>3. 课程介绍</h3>
+<!--扫码购买-->
+<h3>3. 扫码购买</h3>
 <div>
-	<p>课程介绍包括三部分内容：介绍+课程安排+故事；页面标题为“报名友邻优课”</p>
-	<h4>3.1 介绍页</h4>
+	<h4>3.1 支付页</h4>
+	<p>免费用户扫码后进入支付页，页面title为“24小时体验友邻优课”，页面元素如下：</p>
 	<ul class="ui list">
-		<li>若用户通过扫描“监督邀请卡”进入，则在banner图下方显示：
-			<div class="prd-desc">
-				二维码所属者头像、二维码所属者微信昵称、“【扫码者微信昵称】，希望你能够监督我学好英语。”
-			</div>
+		<li>阿树头像和名字；</li>
+		<li>一段语音<mark>（等阿树录制）</mark></li>
+		<li>一段文字：
+			<p class="prd-desc">Hi，<mark>用户微信名</mark>，我是友邻优课的大管家阿树。在友邻优课，你可以和俞敏洪最欣赏的几位老师一起听外媒新闻、读畅销书籍、提升英语能力。
+				<br /><br /> <span style="color: #B41930;">24小时内听满45分钟，即可退回全部体验费。</span>
+			</p>
 		</li>
-		<li>若用户通过扫描“友邻大使邀请卡”进入，则在banner图下方显示：
-			<div class="prd-desc">
-				二维码所属者头像、二维码所属者微信昵称、“【扫码者微信昵称】，希望你能够和我一起在友邻优课实现英语自由。”
-			</div>
+		<li>用户许可协议：点击后打开新页面，地址为<span class="prd-desc">http://ylyk.com/pages/userAgreement.html</span></li>
+		<li>购买按钮：点击后弹出微信支付，支付成功后到支付成功页面</li>
+	</ul>
+	<p>页面原型如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/purchase.png" />
+	<h4>3.2 支付成功页</h4>
+	<p>页面title为：“支付成功”，页面元素如下：</p>
+	<ul class="ui list">
+		<li>支付成功提示：<span class="prd-desc">支付成功</span>；</li>
+		<li>倒计时：24小时倒计时，时、分、秒；</li>
+		<li>小程序二维码：二维码+<span class="prd-desc">“长按扫码、立即听课”</span>，二维码为小程序首页二维码；</li>
+	</ul>
+	<p>页面原型如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/purchase-success.png" />
+	<h4>3.3 支付失败页</h4>
+	<p>若用户在微信支付时点击了取消则回到当前页面，若有困难，则跳转到支付失败页面，页面中的头像、二维码为该用户对应小答应的头像及二维码，名字固定为“阿树老师”四个字，原型如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/failed.png" />
+	<h4>3.4 小程序二维码提示页</h4>
+	<p>付费用户扫码后进入此页面，页面 title为“小程序-友邻优课学员”，页面元素如下：</p>
+	<ul class="ui list">
+		<li>用户头像和名字；</li>
+		<li>学习时长：用户的收听时长（时长数值较大的那个），单位为分钟；</li>
+		<li>小程序二维码：二维码+<span class="prd-desc">“长按扫码、立即听课”</span>，二维码为小程序首页二维码；</li>
+	</ul>
+	<p>页面原型如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/qrcode.png" />
+</div>
+<!--听课弹窗-->
+<h3>4. 听课弹窗</h3>
+<div>
+	<h4>*听课页面改动</h4>
+	<p>细节改动如下：</p>
+	<ul class="ui list">
+		<li>页面左上角老师头像及姓名<mark>区域</mark>，点击后弹出老师的头像、姓名及介绍；</li>
+		<li>课程教师右侧加入阿树头像：仅体验用户可见（买了商品id：xx<mark>待定！</mark>），点击后弹出下一小节描述的对话框；</li>
+	</ul>
+	<p>页面原型如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/player.png" />
+	<h4>弹窗</h4>
+	<p><mark>体验用户第一次进入听课页面，自动弹出对话框，若非第一次进入，则不弹出</mark>，元素如下：</p>
+	<ul class="ui list">
+		<li>头像及名字：该用户对应的阿树老师头像，名字固定为“阿树老师”（不带10、39这种编号）；</li>
+		<li>一段话：
+			<p class="prd-desc">Hi <mark>用户微信名</mark>，请添加我为微信好友（微信号：<mark>该用户对应的阿树老师的微信号</mark>），听满45分钟后将“我”页面截图发给我，我会把体验费退还给你。</p>
 		</li>
-		<li>下方固定两个按钮：咨询+免费参与；</li>
-		<li>咨询：弹出用户对应小答应的二维码；</li>
-		<li>免费参与 俞敏洪给你交学费：弹出两种参与方式：免费/付费；</li>
+		<li>二维码：该用户对应的阿树老师的微信二维码；</li>
+		<li>关闭文字：<span class="prd-desc">不想加我为好友</span>，点击后对话框收起；</li>
 	</ul>
-	<h4>3.2 课程页</h4>
-	<ul class="ui list">
-		<li>4个部分：点击切换显示相应的介绍，固定在顶部；</li>
-		<li>四个理由：点击后展开显示内容，最下方出现“收起”按钮，点击后恢复初始状态（只显示标题）；</li>
-		<li>目录：可以试听的课程点击后弹出试听对话框，同友邻书院；</li>
-	</ul>
-	<h4>3.3 故事页面</h4>
-	<p>同“英语使我自由”页面。
-		<a target="_blank" href="http://wx.youlinyouke.com/youke/story/index.html">点此查看（在微信中打开）</a>
-	</p>
-	<h4>3.4 原型图</h4>
-	<div class="ui three columns grid">
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/intro.png" />
-		</div>
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/courses.png" />
-		</div>
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/stories.png" />
-		</div>
-	</div>
+	<p>页面原型如下：</p>
+	<img class="ui app image" src="img/prototype/wechat/prevue/alert.png" />
 </div>
-<!--奖学金计划-->
-<h3>4. 奖学金计划</h3>
+<!--数据需求-->
+<h3>5. 数据需求</h3>
 <div>
-	<h4>4.1 参与流程</h4>
 	<ul class="ui list">
-		<li>用户在介绍页点击“免费参与”后弹出二维码，扫码后关注友邻优课，并进行自动回复，内容大致如下（具体内容见“自动回复”一章）：
-			<ul>
-				<li>活动介绍：纯文字；</li>
-				<li>
-					<a>点此查看详细介绍及扫码结果</a>：链接，点击后进入免费体验计划页面。</li>
-				<li>专属邀请卡：带二维码的图片；</li>
-			</ul>
-		</li>
-		<li>邀请成功：好友扫描该用户的专属邀请卡，进入介绍页，点击页面下方“接受邀请”按钮后，扫描弹出的二维码即算邀请成功；</li>
-		<li>报名成功：邀请成功人数大于或等于3人即算报名成功，<mark>报名成功后公众号推送模板消息进行提醒</mark>；</li>
-	</ul>
-	<h4>4.2 页面细节提示</h4>
-	<ul class="ui list">
-		<li>免费学习人数：显示固定的5个头像，人数为扫码人数；</li>
-		<li>找人监督按钮：0人扫码时弹出海报；</li>
-		<li>开始学习：大于0人时显示此按钮，超过3人可以点击，跳转到绑定手机号页面；</li>
-		<li>购买高级版：点击后跳转到支付页；</li>
-		<li>查看课程介绍：点击后跳转到介绍页；</li>
-	</ul>
-	<h4>4.3 奖学金计划页面原型</h4>
-	<div class="ui four columns grid">
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/free-0.png" />
-		</div>
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/free-2.png" />
-		</div>
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/free-3.png" />
-		</div>
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/free-more.png" />
-		</div>
-	</div>
-	<h4>4.4 关注公众号-自动回复</h4>
-	<h5>4.4.1 非会员扫描介绍页“免费参与”二维码</h5>
-	<p>非会员在介绍页选择“免费参与”后弹出友邻优课公众号二维码，若用户扫描关注，则弹出如下提醒</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>【扫码人微信昵称】你好，我是友邻优课的大管家阿树，恭喜你获得俞敏洪为你交学费的机会。
-				<br /><br /> 坚持学习需要朋友的监督和鼓励。为了帮你早日实现英语自由，邀请3名以上好友支持你学习英语，俞老师就会为你支付友邻优课体验课程（30天）的99元学费。
-				<br /><br /> 邀请方式：转发下方邀请卡，3名以上好友扫码并接受邀请；
-				<br /><br />
-				<a>点此查看奖学金计划详情</a>（<mark>链接为奖学金计划页面</mark>）
-				<br />------<br /> 如有疑问，可以点击下方的【咨询阿树】和我联系。
-			</li>
-			<li>【专属邀请卡图片】；</li>
-		</ul>
-	</div>
-	<h5>4.4.2 好友扫描“监督学习邀请卡”二维码</h5>
-	<p>免费参与的用户将邀请卡发到朋友圈后，若好友扫码关注友邻优课，则弹出如下提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>【扫码人微信昵称】，你已同意监督好友【二维码所有者微信昵称】学习英语，俞敏洪老师希望你能定期检查他的学习进度。
-				<br /><br /> 同时俞老师也赠送你一次和【二维码所有者微信昵称】一起免费学英语的机会。
-				<br /><br /> 转发下方邀请卡，邀请3名以上好友扫码并接受邀请，支持你学习英语，俞老师就会为你支付友邻优课友邻优课能力进阶体验课程（30天）的99元学费。
-				<br /><br />
-				<a>点此查看详情</a>（<mark>链接为奖学金计划页面</mark>）
-				<br />------<br /> 如有疑问，可以点击下方的【咨询阿树】和我联系。
-			</li>
-			<li>【专属邀请卡图片】；</li>
-		</ul>
-	</div>
-	<h5>4.4.3 扫描自己的二维码</h5>
-	<p>当用户扫描<mark>自己的</mark>邀请卡时，弹出如下提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>仅好友扫码有效，请将你的专属邀请卡分享到朋友圈。</li>
-			<li>【专属邀请卡图片】；</li>
-		</ul>
-	</div>
-	<h5>4.4.4 好友扫码提醒</h5>
-	<p>仅前3名好友扫码后，分享二维码者收到此提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>第1个人扫码后：好友【微信昵称】已接受你的邀请，还差2人即可免费获得T.R.E.E体验课程，分享邀请卡到朋友圈，让朋友监督你的进步。
-				<a>点此查看好友扫码情况</a>（<mark>链接为奖学金计划页面</mark>）</li>
-			<li>第2个人扫码后：好友【微信昵称】已接受你的邀请，还差1人即可免费获得T.R.E.E体验课程，分享邀请卡到朋友圈，让朋友监督你的进步。
-				<a>点此查看好友扫码情况</a>（<mark>链接为奖学金计划页面</mark>）</li>
-			<li>第3个人扫码后：<br />好友【微信昵称】已接受你的邀请，已获得T.R.E.E体验课程。课程将于6月15日正式开始。<br /><br /> 90%的同学购买了本课教材，仅需29元。
-				<a>点此立即购买</a><mark><br /><br />链接是结算页，金额：29元，时长部分文字改为“友邻优课体验课程 专属讲义”。此条消息下面再回复一条该用户的小答应二维码图片。</mark>
-			</li>
-		</ul>
-	</div>
-</div>
-<!--友邻大使计划-->
-<h3>5. 友邻大使计划</h3>
-<div>
-	<h4>5.1 参与流程</h4>
-	<ul class="ui list">
-		<li>页面入口：
-			<ul>
-				<li>小答应发链接邀请会员参与；</li>
-				<li>会员在公众号图文中点解链接进入；</li>
-				<li>会员在介绍页点击免费参与后进入；</li>
-			</ul>
-		</li>
-		<li>生成海报：点击“成为大使”按钮即可生成；</li>
-		<li>邀请成功：好友扫描该用户的专属邀请卡，进入介绍页，点击页面下方“接受邀请”按钮后，扫描弹出的二维码即算邀请成功；</li>
-		<li>排行榜：按照邀请成功人数排名；</li>
-		<li>获得三等奖：邀请成功4人以上即解锁三等奖，同时公众号自动回复，具体内容见“5.4”节；</li>
-		<li>获得优秀大使奖：邀请成功3人以上即解锁优秀大使奖，同时公众号自动回复，具体内容见“5.4”节；</li>
-	</ul>
-	<h4>5.2 页面细节提示</h4>
-	<ul class="ui list">
-		<li>奖励：邀请成功4人以上即解锁三等奖，解锁后右侧显示为“已获得”；</li>
-		<li>奖励：邀请成功3人以上即解锁优秀大使奖，解锁后右侧显示为“已获得”；</li>
-	</ul>
-	<h4>5.3 友邻大使计划页面原型</h4>
-	<div class="ui two columns grid">
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/amb.png" />
-		</div>
-		<div class="ui column">
-			<img class="ui app image" src="img/prototype/wechat/tree/amb2.png" />
-		</div>
-	</div>
-	<h4>5.4 关注公众号-自动回复</h4>
-	<h5>5.4.1 好友扫描“邀请卡”二维码</h5>
-	<p>友邻大使将邀请卡分享到朋友圈后，若好友扫码关注友邻优课，则向好友弹出如下提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>【扫码人微信昵称】你好，我是友邻优课的大管家阿树。
-				<br /><br /> 友邻优课是俞敏洪力荐的英语学习品牌，多位英语名师使用独创的T.R.E.E学习体系，通过解读经典素材帮助你实现英语自由。有如下两种报名方式：
-				<br /><br /> ①免费参与：转发下方邀请卡，3名以上好友扫码并支持你学习英语，俞老师就会为你支付友邻优课友邻优课能力进阶体验课程（30天）的99元学费。
-				<br /><br /> ②付费报名：
-				<a>点此成为友邻同学，与数万名社会精英成为同学。</a>（<mark>链接为支付页</mark>）
-				<br />------<br /> 如有疑问，可以点击下方的【咨询阿树】和我联系。
-			</li>
-			<li>【专属邀请卡图片】；</li>
-		</ul>
-	</div>
-	<h5>5.4.2 扫描自己的二维码</h5>
-	<p>当友邻大使扫描<mark>自己的</mark>邀请卡时，弹出如下提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>仅好友扫码有效，请将你的专属邀请卡分享到朋友圈。或
-				<a>点此查看好友扫码情况</a>（<mark>链接为友邻大使计划页面</mark>）</li>
-			<li>【专属邀请卡图片】；</li>
-		</ul>
-	</div>
-	<h5>5.4.4 好友扫码提醒</h5>
-	<p>仅<mark>第一名</mark>好友扫码后，分享二维码的友邻大使收到此提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>好友【微信昵称】已接受你的邀请，3名以上好友接受邀请，即可免费获得T.R.E.E课程。
-				<a>点此查看好友扫码情况</a>。（<mark>链接为友邻大使计划页面</mark>）</li>
-		</ul>
-	</div>
-	<h5>5.4.5 获得优秀大使奖</h5>
-	<p>第3人扫码时收到提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>好友【微信昵称】已接受你的邀请，已邀请3名好友。<br /><br />恭喜你获得“优秀大使奖”，奖品为：友邻优课能力进阶课程。
-				<a>点此查看好友扫码情况</a>。（<mark>链接为友邻大使计划页面</mark>）</li>
-		</ul>
-	</div>
-	<h5>5.4.6 获得三等奖</h5>
-	<p>第4人扫码时收到提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>好友【微信昵称】已接受你的邀请，已邀请4名好友。<br /><br />恭喜你获得“三等奖”，奖品为：2000元终身学习代金券。
-				<a>点此查看好友扫码情况</a>。（<mark>链接为友邻大使计划页面</mark>）</li>
-		</ul>
-	</div>
-</div>
-
-<!--支付页-->
-<h3>6. 支付页</h3>
-<div>
-	<h4>6.1 定价策略</h4>
-	<p>友邻优课新版课程体系有如下四种价格：</p>
-	<table class="ui center aligned celled table">
-		<thead>
-			<tr>
-				<th class="one wide"></th>
-				<th>能力进阶版</th>
-				<th>巩固提升版</th>
-				<th>终身学习版</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>商品名称</td>
-				<td>友邻优课能力进阶课程</td>
-				<td>友邻优课巩固提升课程</td>
-				<td>友邻优课终身学习课程</td>
-			</tr>
-			<tr>
-				<td>售价</td>
-				<td>¥1790</td>
-				<td>¥2390</td>
-				<td>¥5990</td>
-			</tr>
-			<tr>
-				<td>权益</td>
-				<td>能力进阶课程200节+365天有效期+线上班级+课程讲义包邮+友邻金融分期特权</td>
-				<td>外媒新闻解读200节+365天有效期+线上班级+友邻金融分期特权+外媒新闻每日解读</td>
-				<td>友邻优课能力进阶课程+外媒新闻每日解读+终身学习者专属课+终身学习者专属社群+终身学习者专属讲义+线下活动优先参与权+专人规划师+好友礼品卡价值¥1790</td>
-			</tr>
-			<tr>
-				<td>原型</td>
-				<td><img class="ui app image" src="img/prototype/wechat/tree/pay-try.png" /></td>
-				<td><img class="ui app image" src="img/prototype/wechat/tree/pay-basic.png" /></td>
-				<td><img class="ui app image" src="img/prototype/wechat/tree/pay-lifelong.png" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<h4>6.2 会员补差价方案</h4>
-	<p>友邻优课会员仅能购买终身会员。补差价方案如下：</p>
-	<ul class="ui list">
-		<li>公众号的“立即购买”链接不允许会员购买，在支付页点击支付后提示找小答应。</li>
-		<li>给小答应3个金额的补费链接。<mark>暂定</mark></li>
-		<li><mark>6月10日0点前</mark>会员点击支付按钮，显示原型图，点击拒绝优惠后继续以原价购买：<br />
-			<img class="ui app image" src="img/prototype/wechat/tree/pay-vip.jpeg" />
-		</li>
-	</ul>
-	<h4>6.3 关注公众号</h4>
-	<p>若用户<mark>未关注</mark>友邻优课公众号，则在点击“立即支付”后，弹出公众号二维码，用户关注后自动回复如下内容：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>Hello 【用户微信昵称】，我是友邻优课的大管家阿树。
-				<br /><br />友邻优课是俞敏洪力荐的英语学习品牌，多位英语名师使用独创的T.R.E.E学习体系，通过解读经典素材帮助你实现英语自由。
-				<br /><br />
-				<a>点击此处继续完成报名</a>
-			</li>
-		</ul>
-	</div>
-	<h4>6.4 支付成功提醒</h4>
-	<h5>6.4.1 能力进阶课程/体验课程</h5>
-	<p>非会员购买<mark>能力进阶课程/体验课程</mark>支付成功后，推送如下提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>【模板ID】：qMWt-94_eVWkj5_mHwJvChwMQZwLx6U_2Oh87g2BQAQ；</li>
-			<li>【{{first.DATA}}】：恭喜你成为2017级友邻同学，课程将于6月15日正式开始。</li>
-			<li>【课程名称】：【商品名称（见上方表格）】</li>
-			<li>【支付金额】：【金额】元</li>
-			<li>【时间】：【支付成功时间】</li>
-			<li>【{{remark.DATA}}】：点此查看并添加你的专属学习管家为好友，并将此页面截图发给她。如有疑问请点击下方【咨询阿树】按钮，与阿树老师联系。</li>
-			<li>【链接】：倒计时（小答应）页面；</li>
-		</ul>
-	</div>
-	<p>链接页面原型</p>
-	<img class="ui app image" src="img/prototype/wechat/tree/pay-success-countdown.jpeg" />
-	<h5>6.4.2 终身会员</h5>
-	<p>购买<mark>友邻优课终身学习版</mark>支付成功后，推送如下提醒：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>【模板ID】：qMWt-94_eVWkj5_mHwJvChwMQZwLx6U_2Oh87g2BQAQ；</li>
-			<li>【{{first.DATA}}】：恭喜你成为友邻优课终身会员。</li>
-			<li>【课程名称】：【商品名称（见上方表格）】</li>
-			<li>【支付金额】：【金额】元</li>
-			<li>【时间】：【支付成功时间】</li>
-			<li>【{{remark.DATA}}】：点此查看并添加你的专属学习管家为好友，并将此页面截图发给她。如有疑问请点击下方【咨询阿树】按钮，与阿树老师联系。</li>
-			<li>【链接】：小答应页面；</li>
-		</ul>
-	</div>
-	<p>链接页面原型</p>
-	<img class="ui app image" src="img/prototype/wechat/tree/pay-success-lifelong.jpeg" />
-	<h4><mark>6.5 副卡提醒</mark></h4>
-	<p>用户购买终身会员后，除支付成功提醒外，还需推送一条“副卡”提醒，内容如下：</p>
-	<div class="prd-desc">
-		<ul class="ui list">
-			<li>【模板ID】：rVIjqzkWCHFOAdhwvF3JFB5INAOr5BfawDnBjHW9cpw；</li>
-			<li>【{{first.DATA}}】：。</li>
-			<li>【摘要】：此副卡可赠送好友。权益与友邻优课能力进阶课程相同（价值¥1790）。</li>
-			<li>【时间】：30天内有效</li>
-			<li>【{{remark.DATA}}】：点击此处赠送好友（需支付1分钱手续费）。如有疑问请点击下方【咨询阿树】按钮，与阿树老师联系。</li>
-			<li>【链接】：副卡页面；</li>
-		</ul>
-	</div>
-	<p>链接页面原型</p>
-	<img class="ui app image" src="img/prototype/wechat/tree/pay-success-card.jpeg" />
-</div>
-<h3>7. 结算页</h3>
-<div>
-	<p>选择支付方式、填写收货地址，原型图如下：</p>
-	<img class="ui app image" src="img/prototype/wechat/tree/check.png" />
-</div>
-<h3>8. 绑定联系方式</h3>
-<div>
-	<p>同之前。</p>
-</div>
-<h3>9. 友邻金融分期</h3>
-<h4>9.1 认证流程</h4>
-<p>用户选择友邻金融分期支付，并点击立即支付按钮后，开始认证流程，搜集以下信息：</p>
-<ul class="ui list">
-	<li>真实姓名</li>
-	<li>身份证号</li>
-	<li>身份证正反面照片</li>
-</ul>
-<p>提交认证后进入过渡页，提示正在审核中，倒计时30秒。30秒后下方灰色不可点击按钮改为红色可点击，点击后跳转微信支付。</p>
-<p>原型图尚未确定</p>
-
-<h4>9.2 价格方案</h4>
-<p>具体价格如下：</p>
-<div class="prd-desc">
-	<ul class="ui list">
-		<li>1790元 本息合计 1843元 首付 649元 月供 199元*6个月</li>
-		<li>5990元 本息合计 6139元 首付 2149元 月供 399元*10个月</li>
+		<li>转化漏斗：支付页浏览人数-按钮点击量-支付成功页面浏览人数；</li>
+		<li>付费用户访问情况：小程序二维码提示页浏览人数；</li>
+		<li>体验完成率（每天）：退款人数/支付人数；</li>
+		<li>体验转化率（7天）：购买任意权益人数/退款人数（完成）、购买任意权益人数/支付页浏览人数（整体）；</li>
 	</ul>
 </div>
-
-<h3>发货方式</h3>
-<p>6月20日前购买的用户，均在6月20日发送讲义。</p>
-<p>7月1日前购买的用户，均在7月1日在后台处理发货，（注意礼品卡用户）。</p>
-<p>7月1日后，<mark>用户购买后立即开通学习资格</mark>，每天下午16点统一发送讲义。</p>
